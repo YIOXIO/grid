@@ -7,282 +7,58 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-//navbar
-.navbar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    height: .3rem;
-    .menu{
-        max-width: 72rem;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        .logo{
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 4rem;
-            span{
-                font-weight: 300;
-            }
-        }
-        .burger{
-            height: 4rem;
-            width: 3rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            .bar{
-                width: 1.9rem;
-                height: 1.5px;
-                border-radius: 2px;
-                background-color: #eee;
-                transition: .3s;
-                position: relative;
-                &::after, &::before{
-                    content: '';
-                    position: absolute;
-                    width: inherit;
-                    height: inherit;
-                    background: #eee;
-                    transition: .5s;
-                }
-                &::after{
-                    transform: translateY(9px);
-                }
-                &::before{
-                    transform: translateY(-9px);
-                }
-            }
-        }
-    }
-}
-
-//page
-.container{
+.section{
     min-height: 100vh;
     width: 100%;
-    background-color: #485461;
-    background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
-    overflow: hidden;
-    transform-style: preserve-3d;
-    //Main
-    .main{
-        position: relative;
-        width: 100%;
-        left:0;
-        z-index: 5;
-        overflow: hidden;
-        transform-origin: left;
-        transform-style: preserve-3d;
-        transition: .5s;
-        header{
-            min-height: 100vh;
-            width: 100%;
-            position: relative;
-            &.header__one{
-                background: url(https://images3.alphacoders.com/115/1158744.jpg) no-repeat top center/cover;
-            }
-            &.header__two{
-                background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/afc45762042985.5a82efe1ee453.jpg) no-repeat top center/cover;
-            }
-            &.header__three{
-                background: url(https://images7.alphacoders.com/874/thumb-1920-874037.jpg) no-repeat top center/cover;
-            }
-            &.header__four{
-                background: url(https://cdnb.artstation.com/p/assets/images/images/019/587/985/large/framestore-art-department-vegas-env-9.jpg?1564154704) no-repeat top center/cover;
-            }
-            &.header__five{
-                background: url(https://a-static.besthdwallpaper.com/blade-runner-2049-cyberpunk-spinner-wallpaper-3440x1440-15678_15.jpg) no-repeat top center/cover;
-            }
-            &.header__six{
-                background: url(https://get.wallhere.com/photo/blade-runner-2049-screen-shot-photo-manipulation-2012199.jpg) no-repeat top center/cover;
-            }
-
-            .header{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top:0;
-                left: 0;
-                background-color: rgba(43, 51, 59, 0.5);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &__item{
-                    max-width: 35rem;
-                    text-align: center;
-                    color: white;
-                    padding: 0 2rem;
-                    .title{
-                        font-size: 2.7rem;
-                    }
-                    .btn{
-                        margin-top: 1rem;
-                        padding: 0.6rem 1.6rem;
-                        background-color: #1179e7;
-                        border: none;
-                        border-radius: 25px;
-                        color: white;
-                        text-transform: uppercase;
-                        cursor: pointer;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-
-
-    //Shadows
-    .shadow{
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        transform-style: preserve-3d;
-        transform-origin: left;
-        transition: .5s;
-        background: white;
-        &.one{
-            z-index: -1;
-            opacity: .15;
-        }
-        &.two{
-            z-index: -2;
-            opacity: .1;
-        }
-
-
-    }
+    background: url(https://i.pinimg.com/originals/db/7f/5d/db7f5d736eb2b3ab44aae63b56921cf1.jpg) center center/cover no-repeat;
 }
 
-    //Links
-    .links{
-        position: absolute;
-        width: 30%;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a{
-            text-decoration: none;
-            color: #eee;
-            padding: .07rem 0;
-            font-size: 1rem;
-            display: inline-block;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            transition: .3s;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: hide .5s forwards ease;            
-        }
-        ul{
-            list-style: none;
-        }
-    }
+.container{
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    height: 100vh;
+    width: 100%;
 
-
-//Animations
-.container.active{
-    .bar{
-        transform: rotate(360deg);
-        background-color: transparent;
-        &::before{
-            transform: translateY(0) rotate(45deg);
-        }
-        &::after{
-            transform: translateY(0) rotate(-45deg);
-        }
-    }
-
-    .main{
-        animation: main-animation 1s ease;
-        cursor: pointer;
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-        &:hover{
-            transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
-            + .shadow.one{
-                transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
-            }
-        }
-    }
-
-    .shadow.one{
-        animation: shadow-one .6s ease-out;
-        transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
-    }
-
-    .shadow.two{
-        animation: shadow-one .6s ease-out;
-        transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
-    }
-
-    .links a{
-        animation: appear 0.5s forwards ease var(--i);
-    }
 }
-
-
-//KeyFrames
-@keyframes main-animation{
-    from{
-        transform: translate(0);
-    }
-    to{
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-    }
-    
+.General{
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    text-shadow: 5px 5px 20px rgb(226, 179, 50);    
 }
-
-@keyframes shadow-one {
-    0%{
-        transform: translate(0);
+.smalltext{
+    text-align: left;
+    font-size: 40px;
+    color: white;
+    text-shadow: 5px 5px 20px rgb(236, 255, 61);
+    span{
+        text-transform: uppercase;
     }
-    20%{
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    &__1{
+        text-align: right;
+        font-size: 40px;
+        padding-right: 115px;
+        color: white;
+        text-shadow: 5px 5px 20px rgb(236, 255, 61);
     }
-    100%{
-        transform: perspective(1300px) rotateY(20deg) translateZ(120) scale(0.5);
+    &__2{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        text-shadow: 5px 5px 20px rgb(68, 133, 230);
     }
-    
-}
-
-@keyframes hide {
-    from{
-        opacity: 1;
-        transform: translateY(0px);
+    &__3{
+        text-align: right;
+        font-size: 60px;
+        color: white;
+        text-shadow: 5px 5px 20px rgb(199, 100, 230);
     }
-    to{
-        opacity: 0;
-        transform: translateY(10px);
+    &__4{
+        text-align: right;
+        font-size: 20px;
+        color: white;
+        text-shadow: 5px 5px 20px rgb(233, 82, 77);
     }
-    
-}
-
-@keyframes appear {
-    from{
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    
 }

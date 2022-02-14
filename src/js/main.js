@@ -32,7 +32,7 @@ function changeBg(){
     })
     screens.forEach(screen => {
         screen.style.display = 'none'
-        screens(0).style.displa = 'block'
+        screens(0).style.display = 'block'
     })
 }
 changeBg()
