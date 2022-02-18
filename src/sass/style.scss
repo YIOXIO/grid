@@ -12,112 +12,12 @@
 .section{
     min-height: 100vh;
     width: 100%;
-    background: url(https://i.pinimg.com/originals/db/7f/5d/db7f5d736eb2b3ab44aae63b56921cf1.jpg) center center/cover no-repeat;
-
-}
-.s1{
-    background: url(https://artfiles.alphacoders.com/105/thumb-1920-105925.jpg)center center/cover no-repeat;
-    
-}
-.s2{
     background-color: #13212b;
-    background-image: linear-gradient(135deg, #1f3748 0%, #6268d1 100%);
-    
-
-    
-}   
-.s3{
-    background: url(https://artfiles.alphacoders.com/441/44134.jpg)center center/cover no-repeat;
-    
-}
-
-.container{
-    display: flex;
-    padding: 25px;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    height: 100vh;
-    width: 100%;
+    background-image: linear-gradient(135deg, #101e27 0%, #070d1c80 100%);
 
 }
-.general{
-    text-align: center;
-    font-size: 80px;
-    color: white;
-    text-shadow: 5px 5px 20px rgb(226, 179, 50);    
-}
-.smalltext{
-    text-align: left;
-    font-size: 40px;
-    color: white;
-    text-shadow: 5px 5px 20px rgb(236, 255, 61);
-    span{
-        text-transform: uppercase;
-    }
-    &__1{
-        text-align: right;
-        font-size: 40px;
-        padding-right: 115px;
-        color: white;
-        text-shadow: 5px 5px 20px rgb(236, 255, 61);
-    }
-    &__2{
-        text-align: center;
-        font-size: 30px;
-        color: white;
-        text-shadow: 5px 5px 20px rgb(68, 133, 230);
-    }
-    &__3{
-        text-align: right;
-        line-height: 44px;
-        font-style: italic;
-        font-size: 60px;
-        color: white;
-        text-shadow: 5px 5px 20px rgb(199, 100, 230);
 
-    }
-    &__4{
-        text-align: right;
-        font-size: 20px;
-        color: white;
-        text-shadow: 5px 5px 20px rgb(233, 82, 77);
-        span{
-            color: yellow;
-            font-size: 28px;
-        }
-    }
-}
 
-.contentbox{
-    padding-right: 50px;
-    padding-top: 50px;
-}
-
-.block{
-    display: flex;
-    
-}
-
-.btn{
-    width: 140px;
-    height: 37px;
-    font-size: 16px;
-    background-color: #c00;
-    padding: 0px 23px;
-    font-weight: 500;
-    letter-spacing: 0.24px;
-    text-transform: none;
-    border-radius: 2px;
-    color: aliceblue;
-    text-decoration: none;
-}
-
-:root {
-    --main-radius: 5px;
-    --main-padding: 5px;
-  }
-  
-  
   .containergrid {
     // background-color: rgba(0,0,0,.5);
     display: grid;
