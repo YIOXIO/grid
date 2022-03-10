@@ -1,61 +1,245 @@
 .container{
     position: relative;
-    min-height: 100%;
-    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    min-height: 100vh;
+    width: 1140px;
     display: grid;
-    padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-template-rows: minmax(100px, auto);
-    grid-auto-flow: dense;
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 30px;
     :nth-child(1){
+        grid-column:span 2 ;
+        grid-row: span 2;
+    }
+    :nth-child(2){
         grid-column: span 2;
         grid-row: span 1;
     }
-    :nth-child(2){
-        grid-column: span 1;
-        grid-row: span 2;
-    }
     :nth-child(4){
-        grid-column: span 1;
-        grid-row: span 2;
-    }
-    :nth-child(5){
-        grid-column: span 3;
+        grid-column: span 2;
         grid-row: span 1;
     }
+    :nth-child(3){
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    :nth-child(5){
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+
+
+
     .box{
-        border-radius: 10px;
         color: rgb(200, 228, 237);
+        border-radius: 4px;
         background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
         padding: 20px;
         display: grid;
         place-items: center;
         text-align: center;
-        transition: 0.7s;
-        p{
-            font-size: 14px;
-            font-weight: 700;
-        }
+        transition: 1.3s;
+        cursor: pointer;
+    }
+//     .ps{
+//         background: url(https://pbs.twimg.com/profile_banners/2888552634/1447793836/1500x500);
+//         display: flex;
+//         align-items:flex-end ;
+//         text-align: left;
+//         background-size: cover; 
+//         filter: drop-shadow(0 0 6px rgb(191, 171, 57));
+//         &:hover{
+//         filter: drop-shadow(0 0 6px rgb(199, 54, 54));        
+//         background: url(https://pbs.twimg.com/profile_banners/46534182/1398355187/1500x500);
+//         background-size: cover;
+//         color:#ffffff;
+//         text-shadow: #000000 1px 0 9px;
+//         }
+//     }
+//     .ai{ 
+//         background: url(https://i.pinimg.com/originals/23/cf/4d/23cf4dd29818dabb9710f927c2510f1b.jpg);
+//         display: flex;
+//         align-items: flex-end;
+//         text-align: left;
+//         background-size: cover;
+//         text-shadow: #000000 1px 0px 7px;
+//         filter: drop-shadow(0 0 6px rgb(218, 107, 47));
+//         &:hover{
+//         background: url(https://papik.pro/uploads/posts/2021-09/1630605434_3-papik-pro-p-kreativnie-risunki-kraskoi-6.jpg);
+//         background-size: cover;
+//         text-shadow: #ffffff 1px 0px 10px;
+//         color:#181209
+//         }
+//     }
+//     .ae{ 
+//         background: url(https://im0-tub-ru.yandex.net/i?id=f1f9a30128b95242a8cea7e03d63d367-l&ref=rim&n=13&w=640&h=640);
+//         background-size: cover;
+//         place-items: end;
+//         text-align: right;
+//         color: rgb(186, 219, 242);
+//         text-shadow: rgb(0, 0, 0) 1px 0 9px;
+//         filter: drop-shadow(0 0 6px rgb(211, 61, 173));
+//         &:hover{
+//         background: url(https://papik.pro/uploads/posts/2021-09/1632005803_12-papik-pro-p-risunki-krutikh-khudozhnikov-14.jpg);
+//         background-size: cover;
+//         background-position-y: 20% ;
+//         }
+//     }
+//     .pr{
+//         background: url(https://i.pinimg.com/originals/be/37/b0/be37b079a20a86fa1dbd568088ffbcf0.jpg) center center/cover no-repeat;
+//         place-items: end;
+//         text-align: right;
+//         text-shadow: rgb(0, 0, 0) 1px 2px 10px;
+//         filter: drop-shadow(0 0 6px rgb(15, 176, 187));
+//         &:hover{
+//         background: url(https://im0-tub-ru.yandex.net/i?id=22df05112c65ee17c1a908ea896ae3bb-l&ref=rim&n=13&w=640&h=640) center left/cover no-repeat;
+//         background-position-x: 50% ;
+//         }
+//     }
+//     .lr{
+//         background: url(https://img1.goodfon.com/original/1024x1024/d/85/abstrakciya-color-abstract-3309.jpg);
+//         background-size: cover;
+//         background-position-y: 35%;
+//         place-items: end;
+//         text-align: right;
+//         color: #000000;
+//         text-shadow: rgb(255, 255, 255) 1px 0 10px;
+//         filter: drop-shadow(0 0 6px rgb(77, 97, 211));
+//         &:hover{
+//         color: #ffffff;
+//         text-shadow: rgb(0, 0, 0) 1px 0 10px;
+//         background: url(https://phonoteka.org/uploads/posts/2021-05/thumbs/1622467795_15-phonoteka_org-p-zhivopis-v-stile-art-khaus-krasivo-16.jpg);
+//         background-size: cover;
+//         }
+//     }
+//     .dw{
+//         background: url(https://images.wallpaperscraft.ru/image/single/bryzgi_razvody_kraska_160456_2560x1440.jpg) top center/cover no-repeat;
+//         place-items: end;
+//         text-align: right;
+//         text-shadow: rgb(255, 0, 0) 1px 1px 5px;
+//         filter: drop-shadow(0 0 6px rgb(218, 171, 228));
+//         &:hover{
+//         text-shadow: rgb(125, 0, 167) 1px 1px 5px;
+//         background: url(https://images.wallpaperscraft.ru/image/single/abstraktsiia_razvody_kraska_164865_1920x1200.jpg)top center/cover no-repeat;
+//         }
+//     }
+//     .ld{
+//         background: url(https://pbs.twimg.com/profile_banners/983001266/1558734408/1500x500);
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: flex-end;
+//         text-align: left;
+//         background-size: cover;
+//         background-position-y: 12%;
+//         color: #000000;
+//         text-shadow: rgb(255, 255, 255) 1px 0 8px;
+//         filter: drop-shadow(0 0 6px rgb(255, 255, 255));
+//         &:hover{
+//         color: #ffffff;
+//         text-shadow: rgb(0, 0, 0) 1px 1px 5px;
+//         background: url(https://pbs.twimg.com/profile_banners/754436664/1421969491/1500x500);
+//         background-size: cover;
+//         background-position-y: 12%;
         
-        img{
-            position: relative;
-            max-width: 70px;
-            margin-bottom: 10px;
-        }
-        &:hover{
-            background: #201f43;
+//         }
+//     }
+// }
+
+
+
+@media (max-width: 1650px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: minmax(100px, auto);
+    }
+
+}
+
+@media (max-width: 1451px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: minmax(100px, auto);
+        padding: 2em;
+    }
+
+}
+
+@media (max-width: 1050px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: minmax(100px, auto);
+        padding:1.25em;
+        .box{
+            img{
+                background-position-y: 50% ;
+                max-width: 37px;
+            }
+            p{
+                font-size: 13px;
+            }
         }
     }
 }
-@media (max-width: 991px)
-{
+
+@media (max-width: 991px){
     .container{
-        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: minmax(50px, auto);
+        .box{
+            // grid-column: unset;
+            // grid-row: unset;
+            img{
+                max-width: 35px;
+                margin-bottom: 5px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(auto, auto));
         grid-template-rows: minmax(auto, auto);
         .box{
             grid-column: unset;
             grid-row: unset;
+            img{
+                max-width: 30px;
+                margin-bottom: 5px;}
+            p{
+                font-size: 12px;
+            }
         }
     }
+
+}
+
+@media (max-width: 529px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(auto, auto));
+        grid-template-rows: minmax(auto, auto);
+        padding: 5px;
+        .box{
+            display: grid;
+            place-items: start;
+            text-align: start;
+            // grid-column: unset;
+            // grid-row: unset;
+            padding: 5px;
+            img{
+                max-width: 21px;
+                margin-bottom: 5px;}
+            p{
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
 }
